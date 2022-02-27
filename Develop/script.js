@@ -1,6 +1,7 @@
 
 var password = document.getElementById("password");
 // var generateBtn = document.getElementById("generate");
+
 // Character Types
 const lowercase = "abcdefghijklmnopqrstuvwxyz";
 const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -17,43 +18,50 @@ var symbolsChoice = confirm("Do you want to include symbols?")
 /* With the provided criteria chosen at the top, this function 
 generates the password and returns it */
 function generatePassword() {
-  var password = "";
-  var pool = "";
+  var charPool = "";
+  var givenPassword = "";
 
   if ( lowercaseChoice ) {
-    pool += lowercase;
+    charPool = charPool.concat(lowercase);
   } 
   if (uppercaseChoice) {
-    pool += uppercase;
+    charPool = charPool.concat(uppercase);
   }
 
   if (numbersChoice){
-    pool += numbers;
+    charPool = charPool.concat(numbers);
   }
 
   if (symbolsChoice){
-    pool += symbols;
+    charPool = charPool.concat(symbols);
   }
-console.log();
-  for (var i = 0; i < givenLength; i++) {
-    var pool = Math.floor(Math.random() * givenLength + 1)
-    // console.log("Im inside the for loop haha");
-    // from here, randomly select a character from the pool and concat it to the password
-    }
-  return password;
 
+  if (charPool.length === 0) return;
+
+  console.log("charPool = " + charPool);
+
+  for (var i = 0; i < givenLength; i++) {
+    var randomChar = Math.floor(Math.random() * charPool.length);
+    var result = charPool[randomChar];
+    var givenPassword = givenPassword.concat(result);
+    // console.log("Im inside the for loop haha");
+    // from here, randomly select a character from the charPool and concat it to the password
+    }
+  return givenPassword;
 }
+
 
 // Write password to the #password input //
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 
 }
 
 // Add event listener to generate button//
+var generateBtn = document.querySelector("#generate"); 
+
 generateBtn.addEventListener("click", writePassword);
 
 
