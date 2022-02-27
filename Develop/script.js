@@ -1,76 +1,71 @@
-// Assignment code here
-var password = document.getElementById("password");
 
+var password = document.getElementById("password");
+// var generateBtn = document.getElementById("generate");
+// Character Types
 const lowercase = "abcdefghijklmnopqrstuvwxyz";
 const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numbers = "0123456789";
-const symbols = "!@#$%^&*()";
+const symbols = "!@#$%^&*()}{][?.,~`<>+=-";
 
-// var passwordLength = function promptPasswordLength() {
-//   return givenLength;
-// }
-
+// Prompts for character type criteria
 var givenLength = prompt("Please enter your desired password length between 8 and 128.", 8);
+var lowercaseChoice = confirm("Do you want to include lower case letters?");
+var uppercaseChoice = confirm("Do you want to include upper case letters?")
+var numbersChoice = confirm("Do you want to include numbers?")
+var symbolsChoice = confirm("Do you want to include symbols?")
 
-var lowercaseChoice = confirm("Do you want to use lower case?");
-
+/* With the provided criteria chosen at the top, this function 
+generates the password and returns it */
 function generatePassword() {
   var password = "";
   var pool = "";
-  if ( lowercaseChoice ) {
-    pool += lowercase
-  } 
 
+  if ( lowercaseChoice ) {
+    pool += lowercase;
+  } 
+  if (uppercaseChoice) {
+    pool += uppercase;
+  }
+
+  if (numbersChoice){
+    pool += numbers;
+  }
+
+  if (symbolsChoice){
+    pool += symbols;
+  }
+console.log();
   for (var i = 0; i < givenLength; i++) {
-    console.log("Im inside the for loop haha");
+    var pool = Math.floor(Math.random() * givenLength + 1)
+    // console.log("Im inside the for loop haha");
     // from here, randomly select a character from the pool and concat it to the password
     }
   return password;
+
 }
-
-
-// document.getElementById("password").value = password;
-
-
-// // Get references to the #generate element
-// var x = document.querySelector("#generate");
-
-// // Write password to the #password input
-// function writePassword() {
-//   // var password = generatePassword();
-//   // var passwordText = document.querySelector("#password");
-//   console.log(x);
-//   // passwordText.value = password;
-
-// }
-
-// // Add event listener to generate button
-// x.addEventListener("click", writePassword);
-
-
-
-// //Assignment code here
-// function 
-
-// Get references to the #generate element //
-var generateBtn = document.querySelector("#generate");
-
-// function generatePassword() {
-//   var x = "Password1.0";
-//   return x;
-// }
 
 // Write password to the #password input //
 function writePassword() {
-  
   var password = generatePassword();
-  var x = document.querySelector("#password");
+  var passwordText = document.querySelector("#password");
 
-  x.value = password;
+  passwordText.value = password;
 
 }
 
 // Add event listener to generate button//
-
 generateBtn.addEventListener("click", writePassword);
 
+
+
+
+
+
+/* Example of copyPassword
+function copyPassword() {
+  var copyText = document.getElementById("password");
+  copyText.ariaSelected();
+  copyText.setSelectionRange(02, 129);
+  document.execCommand("copy");
+}
+*/
