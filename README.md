@@ -1,9 +1,8 @@
-# Password Generator Starter Code
 # Password Generator 
 
 ## Description 
 ![alt text](./Develop/passwordGen.png)
-The website hosts a password generator that generates randomized characters allows the user to pick their desired criteria for the pass word. The user can indicate 
+This website hosts a password generator that generates randomized character passwords. The user can indicate their desired criteria for the password, including lower case letters, upper case letters, special characters, and numbers, as well as how long they would like their password. Please visit the link below to view the password generator.   
 
 
 ## Table of Contents 
@@ -13,7 +12,7 @@ The website hosts a password generator that generates randomized characters allo
 
 ## Website
 Here is a link to the live website:
-[Password Generator]()
+[Password Generator](https://vtori37.github.io/password-generator/)
 
 
 ## Contributors
