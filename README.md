@@ -22,7 +22,7 @@ Here is a link to the live website:
 The following individuals helped assit me in building this code:
 * [Jamel James](https://github.com/jrj-sys)
 * [Paul Soliz](https://github.com/ModiFir3)
-* [Thomas "Xander" Hamilton]
+* [Thomas "Xander" Hamilton](https://github.com/tsadiktalmudim)
 * [Lucio Davila](https://github.com/Lucio-001)
 * [Stephen Fike]
 * [Stefan Oddson]
