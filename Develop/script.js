@@ -8,47 +8,61 @@ const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const numbers = "0123456789";
 const symbols = "!@#$%^&*()}{][?.,~`<>+=-";
 
-// Prompts for character type criteria
-var givenLength = prompt("Please enter your desired password length between 8 and 128.", 8);
-var lowercaseChoice = confirm("Do you want to include lower case letters?");
+// Criteria Prompts
+/* var lowercaseChoice = confirm("Do you want to include lower case letters?");
 var uppercaseChoice = confirm("Do you want to include upper case letters?")
 var numbersChoice = confirm("Do you want to include numbers?")
-var symbolsChoice = confirm("Do you want to include symbols?")
+var symbolsChoice = confirm("Do you want to include symbols?") */
 
-/* With the provided criteria chosen at the top, this function 
-generates the password and returns it */
+// Prompts for character type criteria
+
+
+  
 function generatePassword() {
-  var charPool = "";
-  var givenPassword = "";
-
-  if ( lowercaseChoice ) {
-    charPool = charPool.concat(lowercase);
-  } 
-  if (uppercaseChoice) {
-    charPool = charPool.concat(uppercase);
-  }
-
-  if (numbersChoice){
-    charPool = charPool.concat(numbers);
-  }
-
-  if (symbolsChoice){
-    charPool = charPool.concat(symbols);
-  }
-
-  if (charPool.length === 0) return;
-
-  console.log("charPool = " + charPool);
-
-  for (var i = 0; i < givenLength; i++) {
-    var randomChar = Math.floor(Math.random() * charPool.length);
-    var result = charPool[randomChar];
-    var givenPassword = givenPassword.concat(result);
-    // console.log("Im inside the for loop haha");
-    // from here, randomly select a character from the charPool and concat it to the password
+    var charPool = "";
+    var givenPassword = "";
+    
+    var givenLength = window.prompt("Please enter your desired password length between 8 and 128.", 8);
+    // If statement for length criteria
+    if (givenLength < 8 || givenLength > 128 ) {
+      window.alert("Please provide a number between 8 to 128.");
+      generatePassword();
+      return;
     }
-  return givenPassword;
-}
+
+    var lowercaseChoice = confirm("Do you want to include lower case letters?");
+    if ( lowercaseChoice ) {
+      charPool = charPool.concat(lowercase);
+    } 
+
+    var uppercaseChoice = confirm("Do you want to include upper case letters?");
+    if (uppercaseChoice) {
+      charPool = charPool.concat(uppercase);
+    }
+
+    var numbersChoice = confirm("Do you want to include numbers?");
+    if (numbersChoice){
+      charPool = charPool.concat(numbers);
+    }
+
+    var symbolsChoice = confirm("Do you want to include symbols?");
+    if (symbolsChoice){
+      charPool = charPool.concat(symbols);
+    }
+
+    if (charPool.length === 0) return;
+
+    console.log("charPool = " + charPool);
+
+    for (var i = 0; i < givenLength; i++) {
+      var randomChar = Math.floor(Math.random() * charPool.length);
+      var result = charPool[randomChar];
+      var givenPassword = givenPassword.concat(result);
+      // console.log("Im inside the for loop haha");
+      // from here, randomly select a character from the charPool and concat it to the password
+      }
+    return givenPassword;
+  }
 
 
 // Write password to the #password input //
