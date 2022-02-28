@@ -2,9 +2,8 @@
 # Password Generator 
 
 ## Description 
-![alt text](./password-generator/passwordGen.png)
-
-This website 
+![alt text](./Develop/passwordGen.png)
+The website hosts a password generator that generates randomized characters allows the user to pick their desired criteria for the pass word. The user can indicate 
 
 
 ## Table of Contents 
