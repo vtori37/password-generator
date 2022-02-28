@@ -2,7 +2,7 @@
 # Password Generator 
 
 ## Description 
-![alt text](./assets/images/png)
+![alt text](./password-generator/passwordGen.png)
 
 This website 
 
@@ -14,7 +14,7 @@ This website
 
 ## Website
 Here is a link to the live website:
-[]()
+[Password Generator]()
 
 
 ## Contributors
@@ -23,4 +23,6 @@ Here is a link to the live website:
 ## Credits
 * HTML5
 * CSS 
+* JS
 --- 
+

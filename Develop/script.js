@@ -23,12 +23,11 @@ function generatePassword() {
     var givenPassword = "";
     
     var givenLength = window.prompt("Please enter your desired password length between 8 and 128.", 8);
-    // If statement for length criteria
     if (givenLength < 8 || givenLength > 128 ) {
       window.alert("Please provide a number between 8 to 128.");
       generatePassword();
       return;
-    }
+    } 
 
     var lowercaseChoice = confirm("Do you want to include lower case letters?");
     if ( lowercaseChoice ) {
@@ -50,7 +49,8 @@ function generatePassword() {
       charPool = charPool.concat(symbols);
     }
 
-    if (charPool.length === 0) return;
+   if (charPool.length === 0) 
+    return;
 
     console.log("charPool = " + charPool);
 
@@ -83,11 +83,3 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
-/* Example of copyPassword
-function copyPassword() {
-  var copyText = document.getElementById("password");
-  copyText.ariaSelected();
-  copyText.setSelectionRange(02, 129);
-  document.execCommand("copy");
-}
-*/
