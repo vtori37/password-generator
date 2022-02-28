@@ -20,12 +20,12 @@ Here is a link to the live website:
 
 ## Contributors
 The following individuals helped assit me in building this code:
-[Jamel James]()
-[Paul Soliz](https://github.com/ModiFir3)
-[Thomas "Xander" Hamilton]
-[Lucio Davila](https://github.com/Lucio-001)
-[Stephen Fike]
-[Stefan Oddson]
+* [Jamel James]()
+* [Paul Soliz](https://github.com/ModiFir3)
+* [Thomas "Xander" Hamilton]
+* [Lucio Davila](https://github.com/Lucio-001)
+* [Stephen Fike]
+* [Stefan Oddson]
 
 ## Credits
 * HTML5
